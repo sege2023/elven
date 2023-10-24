@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interface</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        {% load static %}
+        {% static "media" as baseUrl %}
+        <link rel="stylesheet" href="{% static 'perfumes.css' %}"/>
+    <body>
+        <nav>===
+            <div class="navtop">
+                <div class="navitem">
+                    <img src="{% static 'media/pexels-pixabay-367' %}17.jpg" width="200" height="100" alt="DAWN.">
+                </div>
+                <div class="navitem">
+                    <h3 class="desc">{{category.category_desc}} </h3>
+                </div>
+                <div class="navitem">
+                    <h1 class="companyname">ELVIN!</h1>
+                </div>
+            </div>
+             <div class="nav-bottom">
+                <div class="search2">
+                    <input class="search1" type="text" placeholder="Search Items">
+                    <button type="submit">Search</button>
+                </div>
+                <div class="contactsection">
+                    <div class="navitemm">
+                        <h4 class="home"><a href="/"> Home </a> </h4>
+                        <h4 class="about">About us </h4>
+                        <h4 class="contact">Contact us </h4>
+                        {% if user.is_authenticated %}
+                        <h4 class="greetings"> Hello, {{user.first_name}}</h4>
+                        <h4 class="login"><a href="{% url 'logout' %}">Logout</a> </h4>
+                        {% else %}
+                        <h4 class="login"><a href="{% url 'login' %}">Login </a> </h4>
+                        <h4 class="register"><a href="{% url 'register' %}">Register</a></h4>
+                        {% endif %}
+                        
+                    </div>
+                </div>
+                <div class="filter_cart">
+                    <div class="filter2">
+                        <select name="filter by price" id="filter1" placeholder="hfhfhfh">
+                            <option disabled="disabled" selected="selected" style="color: #000;">  Filter By Price</option>
+                            <option value="">100-1000</option>
+                            <option value="">100-1000</option>
+                            <option value="">100-1000</option>
+                            <option value="">100-1000</option>
+                        </select>
+                    </div>
+                    <div class="cart">
+                           <a href="{% url 'cart' %}"> <img src="{% static 'media/add_to_cart.png' %}" width="50px" height="50px" alt="carts"> </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </nav>
+        <div class="bodyitem">
+            {% for product in products %}
+            <div class="card">
+                <img class="imgg" src="{{product.img.url}}" alt="item's photo">
+                <h3>{{product.name}}</h3>
+                <p class="price">NGN {{product.price}}</p>
+                <p>
+                    {{product.desc}}
+                </p>
+
+                <a href="{% url 'add_to_cart' product_id=product.id %}"> <button>Add to cart</button> </a>
+
+
+            </div>
+            {% endfor %}
+
+
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    </body>
+</html>
+
+
+
+
+
+

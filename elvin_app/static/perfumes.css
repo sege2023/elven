@@ -1,0 +1,207 @@
+body{
+    font-family: 'Cormorant SC', serif;
+    padding: 0;
+    margin: 0;
+background-color: black;
+}
+
+nav{
+    background-color: purple;
+    background-image: url("pexels-luis-zambrano-10948492.jpg");
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.navtop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+}
+
+.navitem{
+    background-color: transparent;
+    border-radius: 10px;
+}
+.desc{
+    font-size: 40px;
+    color: wheat;
+}
+.companyname{
+    border-bottom: 2px solid purple;
+    margin: 10px;
+}
+
+
+.desc{
+    /* color: black; */
+}
+
+
+
+
+
+
+
+
+.card{
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0,1);
+    max-width: 300px;
+    margin: 20px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: grey;
+}
+.imgg{
+    height: 400px;
+    width: 100%;
+}
+h4{
+    margin: 20px;
+}
+
+h3{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.price{
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+/*
+.card button{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+*/
+
+.card button{
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 15px;
+    color: white;
+    text-decoration: none;
+    background: black;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+.card:hover button{
+    opacity: 0.5;
+    top: 0;
+}
+.bodyitem{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.nav-bottom{
+    /* margin-top: 20px; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    justify-content: space-between;
+    /* background-color: rgb(125, 121, 121); */
+    height: 60px;
+    width: 100%;
+}
+.search2{
+    /* background-color: aquamarine; */
+    width: 500px;
+}
+.search1::placeholder{
+    font-size: 20px;
+    color: black;
+}
+.search1{
+    margin-left: 10px;
+    width: 400px;
+    text-align: center;
+}
+#filter1{
+    width: 200px;
+    height: 40px;
+}
+.cart{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+}
+.filter-name{
+    font-size: 300px;
+    color: blue;
+}
+footer{
+    padding: 20px;
+    margin-top: 20px;
+    background-color: grey;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+.about{
+    /* padding: 20px; */
+    color: blue;
+}
+.login{
+    /* padding: 20px; */
+}
+.contact{
+    /* padding: 20px; */
+    color: darkred;
+}
+.register{
+    /* padding: 20px; */
+    color: black;
+}
+.home{
+    /* padding: 20px; */
+    color: indigo;
+}
+.contactsection{
+    height: 20px;
+    display: flex;
+    background-color: wheat;
+    margin-left: -80px;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; left: px;
+    padding-right: 10px;
+}
+.filter_cart{
+    width: 500px;
+    justify-content: center;
+    justify-content: space-between;
+    /* background-color: blue; */
+    display: flex;
+    padding: 10px;
+}
+.filter2{
+    /* margin-left: -30px; */
+}
+.navitemm{
+    /* background-color: bisque; */
+    display: flex;
+}

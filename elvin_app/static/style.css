@@ -1,0 +1,171 @@
+body{
+    font-family: 'Cormorant SC', serif;
+    padding: 0;
+    margin: 0;
+}
+nav{
+    /* width: 100%; */
+    height: 120px;
+    background-color: black;
+    padding: 20px 50px;
+    color: beige;
+}
+
+.navTop{
+    /* width: 100%; */
+    /* background-color:aquamarine ; */
+    height: 70px;
+    margin-top: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search{
+    display: flex;
+    background-color: gray;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.searchinput{
+    border: none;
+    background-color: transparent;
+}
+
+.searchinput::placeholder{
+    color: black;
+}
+
+.companyname{
+    border-bottom: 2px solid purple;
+    cursor: pointer;
+    font-size: 50px;
+}
+
+.welcome{
+    text-align: center;
+}
+
+.contactsection{
+    width: 100%;
+    /* background-color: aqua; */
+    /* margin-top: 30px; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+.navitemm{
+    /* background-color: bisque; */
+    display: flex;
+}
+.about{
+    padding: 20px;
+    color: blue;
+}
+.login{
+    padding: 20px;
+}
+.contact{
+    padding: 20px;
+    color: darkred;
+}
+.reg{
+    padding: 20px;
+    color: wheat;
+}
+.home{
+    padding: 20px;
+    color: indigo;
+}
+.menuItem{
+
+    background-color: gray;
+    color: black;
+    border-radius: 10px;
+    padding: 5px 5px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+#services, .subscribe {
+    background-color: dimgray;
+    /* padding: 10px 10px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.comment{
+    margin-top: -50px;
+}
+.subscribe {
+    background-color: darkgray;
+}
+
+.subscribe .card {
+    padding: 30px 0;
+    width: 400px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.service, .card {
+    background-color: grey;
+    width: 200px;
+    text-align: center;
+    padding: 40px;
+    margin: 20px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.service:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 50px;
+}
+
+input {
+    height: 50px;
+    padding: 0 20px;
+}
+
+@media screen and (max-width: 700px) {
+    header {
+        padding: 0 40px 0 20px;
+    }
+    ul {
+        column-gap: 10px;
+    }
+    li {
+        font-size: 0.95rem;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-row-gap: 50px;
+    }
+    #video {
+        width: 400px;
+        height: 250px
+    }
+}
